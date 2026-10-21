@@ -1,0 +1,12 @@
+name: CI Drill Hold
+on:
+  workflow_dispatch:
+jobs:
+  hold:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simulate stuck job
+        run: |
+          echo "drill hold started"
+          sleep 600
+          echo "drill hold finished"
